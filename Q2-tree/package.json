@@ -1,0 +1,11 @@
+{
+  "name": "q2-tree",
+  "version": "1.0.0",
+  "description": "Here is my response to question two for the AIBuild OA. - Benjamin Dong",
+  "main": "ecomm-tree.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Benjamin Dong",
+  "license": "ISC"
+}

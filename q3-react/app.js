@@ -6,6 +6,11 @@ import categoryTreeSelect from "./components/TreeSelect.js";
 import "antd/dist/reset.css"; // Ant Design styles
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
+function content() {
+   // unfinished
+}
+
 root.render(
   <Provider store={store}>
     <App />

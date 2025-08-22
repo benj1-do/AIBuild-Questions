@@ -1,22 +1,22 @@
 import React from "react";
-import { TreeSelect, Button } from 'antd';
-import { useSelector, useDispatch } from 'react-redux';
+import { TreeSelect } from 'antd';
+import { useSelector } from 'react-redux';
 import { fetchCategoriesRequest } from "../redux/categoriesSlice";
-
+import Alert from '@mui/material/Alert';
+// unfinished
 function toTree(categories) {
     return categories.map((cat) => ({
         categoryId: cat.categoryId,
         name: cat.name,
         parent: cat.parent,
-        children: cat.children ? toTree(cat.children) : [],
+        children: cat.children ? toTree(cat.children) : [], 
 
     }));
 }
 
 export default function categoryTreeSelect() {
-    const dispatch = useDispatch();
     const { data, loading } = useSelector((state) => state.categories);
-    // const hook_fetch = 
+
     return (
         <TreeSelect
         showSearch
@@ -31,6 +31,7 @@ export default function categoryTreeSelect() {
         onChange={onChange}
         treeData={toTree(data)}
         onPopupScroll={onPopupScroll}
+        onSelect=
         />
     );
 }
